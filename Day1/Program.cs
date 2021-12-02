@@ -6,7 +6,7 @@ namespace Day1
 {
     internal class Program
     {
-        static void task1()
+        static void Task1()
         {
             string[] numbers = System.IO.File.ReadAllLines("..\\..\\..\\input1.txt");
             int count = 0;
@@ -21,16 +21,13 @@ namespace Day1
             Console.WriteLine($"There are {count} increments");
         }
 
-        static void task2()
+        static void Task2()
         {
             string[] numbers = System.IO.File.ReadAllLines("..\\..\\..\\input1.txt");
-            // Console.WriteLine(numbers[0]);
             int count = 0;
             for (int i = 0; i < numbers.Length - 3; i++)
             {
-                int sum1 = Convert.ToInt32(numbers[i]) + Convert.ToInt32(numbers[i + 1]) + Convert.ToInt32(numbers[i + 2]);
-                int sum2 = Convert.ToInt32(numbers[i + 1]) + Convert.ToInt32(numbers[i + 2]) + Convert.ToInt32(numbers[i + 3]);
-                if (sum2 > sum1)
+                if (Convert.ToInt32(numbers[i + 3]) > Convert.ToInt32(numbers[i]))
                 {
                     count++;
                 }
@@ -38,10 +35,10 @@ namespace Day1
 
             Console.WriteLine($"There are {count} sum increments");
         }
-        static void Main(string[] args)
+        static void Main()
         {
-            task1();
-            task2();
+            Task1();
+            Task2();
         }
     }
 }

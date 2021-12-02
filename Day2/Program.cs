@@ -4,7 +4,7 @@ namespace Day2
 {
     internal class Program
     {
-        static void task()
+        static void Task()
         {
             string[] instructions = System.IO.File.ReadAllLines("..\\..\\..\\input2.txt");
             char separator = ' ';
@@ -38,11 +38,11 @@ namespace Day2
             long result2 = hor * vert2;
 
 
-            Console.WriteLine($"The task 1 result is {result1} and task 2 results is {result2}");
+            Console.WriteLine($"The task 1 result is {result1} and task 2 result is {result2}");
         }
         static void Main(string[] args)
         {
-            task();
+            Task();
         }
     }
 }
